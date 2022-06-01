@@ -73,4 +73,9 @@ class VerificationCodeViewController: UIViewController {
         }
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.resignFirstResponder()
+        return false
+    }
+    
 }

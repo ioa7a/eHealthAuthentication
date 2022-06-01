@@ -9,7 +9,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var phoneNumberTextField: UITextField!
     
@@ -38,6 +38,9 @@ class SignUpViewController: UIViewController {
                 }
             }
         }
-    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.resignFirstResponder()
+        return false
+    }
 }
 
